@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Store</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fruit {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .fruit img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .fruit-info {
+            flex-grow: 1;
+        }
+        
+        .fruit h2 {
+            color: #333;
+            margin: 0;
+            margin-bottom: 8px;
+        }
+        
+        .fruit p {
+            color: #666;
+            margin: 0;
+            margin-bottom: 12px;
+        }
+        
+        .fruit .price {
+            font-weight: bold;
+        }
+        
+        .fruit .button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Fruit Store</h1>
+        
+        <div class="fruit">
+            <img src="apple.jpg" alt="Apple">
+            <div class="fruit-info">
+                <h2>Apple</h2>
+                <p>A juicy and nutritious fruit.</p>
+                <p class="price">$1.99 per pound</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="fruit">
+            <img src="banana.jpg" alt="Banana">
+            <div class="fruit-info">
+                <h2>Banana</h2>
+                <p>A tasty and energy-rich fruit.</p>
+                <p class="price">$0.99 per pound</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="fruit">
+            <img src="orange.jpg" alt="Orange">
+            <div class="fruit-info">
+                <h2>Orange</h2>
+                <p>A refreshing and vitamin C-packed fruit.</p>
+                <p class="price">$2.49 per pound</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
