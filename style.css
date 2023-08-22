@@ -14,7 +14,7 @@ h1 {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -62,6 +62,8 @@ h1 {
 
 .fruit .price {
     font-weight: bold;
+    height:20px;
+   
 }
 
 .fruit .button {
@@ -71,8 +73,41 @@ h1 {
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
+    margin-right: 5px;
     transition: background-color 0.3s ease;
 }
 .fruit .button:hover {
     background-color: #ff7f00;
+}
+.decrease-quantity{
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: medium;
+      cursor:pointer;
+}
+.increase-quantity{
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: medium;
+      cursor:pointer;
+}
+.fruit input{
+    width: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size:medium;
+}
+.quantity-display {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+#heart{
+    height: 20px;
+    width: 20px;
+    margin-left:20px;
+    justify-items: center;
+    cursor:pointer;
+    
+  
 }

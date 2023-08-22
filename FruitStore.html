@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Store</title>
     <link rel="stylesheet" href="./style.css"/>
 </head>
@@ -9,62 +10,106 @@
         <h1>Welcome to the Fruit Store</h1>
         <div class="fruits-container">
         <div class="fruit">
-            <img src="apple.jpg" alt="Apple">
+            <img src="./images/apple.jpg" alt="Apple">
             <div class="fruit-info">
                 <h2>Apple</h2>
                 <p>A juicy and nutritious fruit.</p>
-                <p class="price">$1.99 per pound</p>
-                <a href="#" class="button">Add to Cart</a>
+                <p class="price">$1.99 per pound<img src="./images/heart.png" id="heart"></p>
+                <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
             </div>
         </div>
         
         <div class="fruit">
-            <img src="banana.jpg" alt="Banana">
+            <img src="./images/banana.jpg" alt="Banana">
             <div class="fruit-info">
                 <h2>Banana</h2>
                 <p>A tasty and energy-rich fruit.</p>
-                <p class="price">$0.99 per pound</p>
-                <a href="#" class="button">Add to Cart</a>
+                <p class="price">$0.99 per pound<img src="./images/heart.png" id="heart"></p>
+                <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
             </div>
         </div>
         
         <div class="fruit">
-            <img src="orange.jpg" alt="Orange">
+            <img src="./images/orange.jpg" alt="Orange">
             <div class="fruit-info">
                 <h2>Orange</h2>
                 <p>A refreshing and vitamin C-packed fruit.</p>
-                <p class="price">$2.49 per pound</p>
-                <a href="#" class="button">Add to Cart</a>
+                <p class="price">$2.49 per pound<img src="./images/heart.png" id="heart"></p>
+                <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
             </div>
         </div>
             <div class="fruit">
-                <img src="mango.jpg" alt="Apple">
+                <img src="./images/mango.jpg" alt="Mango">
                 <div class="fruit-info">
                     <h2>Mango</h2>
                     <p>A content of sweet and refreshing flavors.</p>
-                    <p class="price">$1.99 per pound</p>
-                    <a href="#" class="button">Add to Cart</a>
+                    <p class="price">$1.99 per pound<img src="./images/heart.png" id="heart"></p>
+                    <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="increase-quantity">+</button>
                 </div>
                 </div>
                 <div class="fruit">
-                    <img src="strawberry.jpg" alt="Apple">
+                    <img src="./images/strawberry.jpg" alt="Strawberry">
                     <div class="fruit-info">
                         <h2>strawberry</h2>
                         <p>A small conical red fruit.</p>
-                        <p class="price">$1.99 per pound</p>
-                        <a href="#" class="button">Add to Cart</a>
+                        <p class="price">$1.99 per pound<img src="./images/heart.png" id="heart"></p>
+                        <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                        <span class="quantity-display">1</span>
+                        <button class="increase-quantity">+</button>
                     </div>
                     </div>
                     <div class="fruit">
-                        <img src="pineapple.jpg" alt="Apple">
+                        <img src="./images/pineapple.jpg" alt="Pineapple">
                         <div class="fruit-info">
                             <h2>Pineapple</h2>
                             <p>A incredibly delicious healthy tropical fruit.</p>
-                            <p class="price">$1.99 per pound</p>
-                            <a href="#" class="button">Add to Cart</a>
+                            <p class="price">$1.99 per pound<img src="./images/heart.png" id="heart" ></p>
+                            <a href="#" class="button">Add to Cart</a><button class="decrease-quantity">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="increase-quantity">+</button>
                         </div>
                         </div>
                         
     </div>
+    <script>
+        const decreaseButtons = document.querySelectorAll(".decrease-quantity");
+        const increaseButtons = document.querySelectorAll(".increase-quantity");
+        const quantityDisplays = document.querySelectorAll(".quantity-display");
+      
+        decreaseButtons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            if (quantityDisplays[index].textContent > 1) {
+              quantityDisplays[index].textContent--;
+            }
+          });
+        });
+      
+        increaseButtons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            quantityDisplays[index].textContent++;
+          });
+        });
+
+        const toggleImage = document.getElementById('heart');
+    const body = document.body;
+    let isFlipped = false; // Track whether the image is flipped or not
+
+    toggleImage.addEventListener('click', () => {
+      isFlipped = !isFlipped; // Toggle the value
+      if (isFlipped) {
+        toggleImage.src ='Red-heart (1).png'; // Replace with the path to the other image
+      } else {
+        toggleImage.src = 'heart.png'; // Replace with the path to the original image
+      }
+    });
+      </script>
 </body>
 </html>
